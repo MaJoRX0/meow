@@ -361,8 +361,8 @@ Do Not Touch.
 }
   
 /* Discover Servers Page */
-.pageWrapper-2PwDoS,.list-3FIpnh:not(#a) {
-  background-color: #19171b;
+.pageWrapper-2PwDoS,.list-3FIpnh {
+  background-color: #19171b!important;
 }
 .searchBox-pyIJJj:not(#a) {
   background-color:#141218;
@@ -710,16 +710,16 @@ Do Not Touch.
   stroke: var(--rs-streaming-color);
 }
 
-#app-mount .container-2nx-BQ:not(#a),
-#app-mount .bd-switch-body:not(#a) {
+.container-2nx-BQ,
+.bd-switch-body {
 	width: 20px;
 	height: 20px;
-	background: transparent;
+	background: transparent !important;
 }
 
-#app-mount .container-2nx-BQ .slider-32CRPX,
-#app-mount .bd-switch-body .bd-switch-slider {
-	left: -6px;
+.container-2nx-BQ .slider-32CRPX,
+.bd-switch-body .bd-switch-slider {
+	left: -6px !important;
 }
 
 #app-mount .container-2nx-BQ .slider-32CRPX>rect,
@@ -769,7 +769,10 @@ Do Not Touch.
 
 /* searchbar fix */
 .option-ayUoaq:after{
-  content: none;
+  background: var(--background-secondary);
+}
+.option-ayUoaq:hover:after{
+  background: linear-gradient(to left, var(--background-secondary-alt) 53%,transparent 94%);
 }
 #app-mount .queryContainer-ZunrLZ{
   background-color: var(--background-secondary);
@@ -777,4 +780,59 @@ Do Not Touch.
 #app-mount .queryShortcut-GrmI-7 .key-N5VmHN{
   background-color: #282430;
   box-shadow: none;
+}
+
+/* phone number modal styling */
+.phoneVerificationModal-3OHeBt{
+  background-color: #121016;
+}
+.phoneVerificationModal-3OHeBt>.flex-2S1XBF>button{
+  background-color: var(--brand-experiment-500);
+}
+.phoneVerificationModal-3OHeBt>.flex-2S1XBF>button:hover{
+  background-color: var(--brand-experiment-560);
+}
+.phoneVerificationModal-3OHeBt>.flex-2S1XBF>input,
+.phoneVerificationModal-3OHeBt>.flex-2S1XBF{
+  background-color: var(--messagebox-bg);
+  box-shadow: none;
+  border: 0;
+}
+.phoneVerificationModal-3OHeBt>.flex-2S1XBF{
+  filter: drop-shadow(0 0 5px var(--messagebox-bg));
+}
+#app-mount .elevationBorderLow-3_3rXL{
+  background: var(--background-secondary);
+}
+body #app-mount .phoneFieldScroller-e7_1Vz>.selectableItem-3-fmiM:hover{
+  background-color: var(--user-popout-bg);
+}
+#app-mount .phoneFieldScroller-e7_1Vz>.selectableItem-3-fmiM:focus{
+  background-color: transparent;
+}
+
+/* region popout restyle */
+#app-mount .quickSelectPopout-2F0PXw{
+  background: var(--background-floating);
+  backdrop-filter: blur(20px);
+}
+body #app-mount .quickSelectPopout-2F0PXw>.quickSelectPopoutOption-2E2UmS:hover{
+  background-color: var(--background-modifier-hover);
+}
+#app-mount .quickSelectPopout-2F0PXw>.quickSelectPopoutOption-2E2UmS:focus{
+  background-color: transparent;
+}
+.topControls-23RE3h>:not([class])>.flex-3BkGQD{
+  margin-top: 5px;
+}
+
+/* restyling gif picker */
+#app-mount .emptyHintCard-2A7Tng{
+  background-color: var(--background-accent);
+}
+#gif-picker-tab-panel .result-pzZrwj>.categoryFadeBlurple-1l49_Q{
+  background-color: rgba(58, 49, 81, 0.8);
+}
+#app-mount #gif-picker-tab-panel .focused-16Owih:after, #app-mount #gif-picker-tab-panel .result-pzZrwj:hover:after{
+  box-shadow: inset 0 0 0 2px rgba(118, 100, 162),inset 0 0 0 3px rgba(118, 100, 162, 0.8);
 }
